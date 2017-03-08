@@ -1,0 +1,44 @@
+body {
+	background-image: url(https://drscdn.500px.org/photo/123084989/q%3D80_m%3D2000/8824dbf1787af33499be7e27b18f6b32);
+}
+
+#headingText {
+	font-size: 60px;
+	font-weight: 700;
+	text-align: center;
+	color: #FFF;
+	margin-top: 10px;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+		 0px 8px  13px  rgba(0,0,0,0.1),
+		 0px 18px 23px  rgba(0,0,0,0.1);
+}
+
+#date {
+	font-size: 45px;
+	font-weight: 400;
+	text-align: center;
+	color: #FFF;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+	 0px 8px  13px  rgba(0,0,0,0.1),
+	 0px 18px 23px  rgba(0,0,0,0.1);
+
+}
+
+
+#clock {
+	font-size: 150px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 10vh;
+	margin-bottom: 5px;
+	color: #FFF;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+	 0px 8px  13px  rgba(0,0,0,0.1),
+	 0px 18px 23px  rgba(0,0,0,0.1);
+
+}
+
+
+
+
+
