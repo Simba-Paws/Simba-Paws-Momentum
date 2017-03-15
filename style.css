@@ -54,6 +54,10 @@ ul li {
 	color: white;
 }
 
+#todo-list .complete {
+	text-decoration: line-through;
+}
+
 
 
 
