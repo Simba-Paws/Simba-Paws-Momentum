@@ -2,16 +2,37 @@ $(document).ready(function() {
 
 $("#todo-list").html(formatToDos());
  
+// $("#todo-list").on("click", "li span", function() {
+
+// 	var index = $(this).parent().index();
+// 	if ($(this).hasClass("deleteTodo")) {
+// 		deleteItem(index);
+// 	} 
+// 	else {
+// 		toggleComplete(index);
+// 	}
+// })
+
+
+// toggle todo
+$("#todo-list").on("click", "li span", function() {
+
+	var index = $(this).parent().index();
+	if ($(this).hasClass("checkBox")) {
+		toggleComplete(index)
+	} 
+})
+
+// delete todo
 $("#todo-list").on("click", "li span", function() {
 
 	var index = $(this).parent().index();
 	if ($(this).hasClass("deleteTodo")) {
 		deleteItem(index);
 	} 
-	else {
-		toggleComplete(index);
-	}
 })
+
+
 
 $("#newItem").submit(function (e) {
 	e.preventDefault();
@@ -33,7 +54,7 @@ $("#newItem").submit(function (e) {
 
 
 
-var todoList = [{name: "get this working", complete: false}];
+var todoList = [{name: "First todo", complete: false}];
 
 function addItem(item) {
 	var obj = {};
@@ -68,6 +89,7 @@ function formatToDos() {
 
 var todos = "";
 var className = "complete";
+
 for (var i = 0; i < todoList.length; i++) { 
 	if (todoList[i].complete) {
 		className = "complete";
@@ -75,8 +97,10 @@ for (var i = 0; i < todoList.length; i++) {
 	else {
 		className = "";
 	}
-	todos += "<li class=" + className + ">" + "<span class=\"deleteTodo\">X</span>    " + "<span class=\"list-item\">" + todoList[i].name  + "</span>" + "</li>";
+	todos += "<li class=" + className + ">" + "<span class=\"deleteTodo\">&#9747</span>    "   +  "<span class=\"checkBox\"> &#9634 </span>    " + "<span class=\"list-item\">" + todoList[i].name  + "</span>" + "</li>";
 }
+
+
 
 return todos;
 }
