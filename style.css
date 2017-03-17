@@ -1,5 +1,8 @@
 body {
-	background-image: url(https://drscdn.500px.org/photo/123084989/q%3D80_m%3D2000/8824dbf1787af33499be7e27b18f6b32);
+	background-image: url(https://drscdn.500px.org/photo/116050935/q%3D80_m%3D2000/04fa01d22b415d234b1289bd1ba85320);
+	width: auto;
+	height: auto;
+	/*background-image: url(https://drscdn.500px.org/photo/123084989/q%3D80_m%3D2000/8824dbf1787af33499be7e27b18f6b32);*/
 }
 
 #headingText {
@@ -50,8 +53,31 @@ body {
 	line-height: 7.5px
 }
 
+ul li {
+	color: white;
+}
 
+.complete {
+	color: red;
+}
 
+#todo-list .complete {
+	text-decoration: line-through;
+}
+
+.todoContainer {
+    background-color: #111216;
+    color:#999999;
+    width:350px;
+    margin: 50px auto auto auto;
+    padding-bottom:12px;
+    opacity: 0.75;
+    border-radius: 10px;
+}
+
+#newItem {
+	text-align: center;
+}
 
 
 
