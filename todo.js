@@ -33,7 +33,7 @@ $(document).ready(function() {
   });
 
 */
-  // handle modifications list item
+  // handle modifications to list item
   $("#todo-list").on("click", "li span", function() {
     var index = $(this).parent().index();
 
