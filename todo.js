@@ -38,14 +38,14 @@ $(document).ready(function() {
     var index = $(this).parent().index();
 
     // if checkbox clicked, toggle complete
-    if ($(this).hasClass("checkbox")) {
+    if ($(this).hasClass("checkBox")) {
       toggleComplete(index);
     }
     // if delete button clicked, delete item
     else if ($(this).hasClass("deleteTodo")) {
       deleteItem(index);
     }
-    // if text clicked, grab content to update the todo 
+    // if text clicked, grab content to update the todo
     else if ($(this).hasClass("list-item")) {
       /*
         insert code to update the todo
