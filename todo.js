@@ -41,9 +41,11 @@ $(document).ready(function() {
     if ($(this).hasClass("checkbox")) {
       toggleComplete(index);
     }
+    // if delete button clicked, delete item
     else if ($(this).hasClass("deleteTodo")) {
       deleteItem(index);
     }
+    // if text clicked, grab content to update the todo 
     else if ($(this).hasClass("list-item")) {
       /*
         insert code to update the todo
