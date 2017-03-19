@@ -1,28 +1,27 @@
 {
-"name": "SM-Momentum",
-"start_url": "./index.html",
-"display": "browser",
-"description": "Increase Productivity by personalizing your new-tab with a dashboard with a daily inspirational photo and todos list",
-"version": "1.0.0",
+	"name": "SM-Momentum",
+	"start_url": "./index.html",
+	"display": "browser",
+	"description": "Increase Productivity by personalizing your new-tab with a dashboard with a daily inspirational photo and todos list",
+	"version": "1.0.0",
 
-"manifest_version": 2,
+	"manifest_version": 2,
 
-"background": {
-	"scripts": ["clock.js", "weather.js", "todo.js"]
-},
+	"background": {
+		"scripts": ["clock.js", "weather.js", "todo.js", "quote.js"]
+	},
 
-"browser_action": {
-"default_icon": "icon.png"
-},
+	"browser_action": {
+	"default_icon": "icon.png"
+	},
 
-"chrome_url_overrides": {
-  "newtab": "index.html"
-},
+	"chrome_url_overrides": {
+	  "newtab": "index.html"
+	},
 
-"permission": [
-	"tabs",
-	"storage",
-	"wallpaper"
-]
-
+	"permissions": [
+		"tabs",
+		"storage",
+		"wallpaper"
+	]
 }
