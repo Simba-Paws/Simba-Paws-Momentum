@@ -84,21 +84,39 @@ ul li {
 	size: 25px;
 }
 
-.search-underline {
-	background-color: rgba(0, 0, 0, 0);
-	opacity: 0;
-	border-bottom: none;
-	color: white;
-}
-
-.search-underline:hover {
-    border-bottom: 2px rgba(255, 255, 255, 1);
-    
-}
 
 .glyphicon-search {
 	color: white;
-	font-size: 20px;
+	font-size: 15px;
 }
 
+.search-input {
+	  height: 60px;
+    padding: 20px 2px 20px 33px;
+    z-index: 2;
+    background: 0 0;
+    border: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 20px;
+    outline: 0;
+}
 
+.search-button {
+	background: transparent;
+	border: none !important;
+	font-size: 0;
+}
+
+.search-underline {
+    border-bottom: 2px solid #fff;
+    opacity: 1;
+    -webkit-transition: opacity .15s ease;
+}
+
+/*.search-underline:hover {
+    border-bottom: 2px solid #fff;
+    opacity: 1;
+    -webkit-transition: opacity .15s ease;
+}*/
