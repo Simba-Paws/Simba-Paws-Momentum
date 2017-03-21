@@ -1,8 +1,13 @@
 $(document).ready(function() {
 
+  $(function(){
+      $('.expand-todo').click(function(){
+          $('.todoContainer').toggle();
+      });
+  });
+
   getTodoList();
   $("#todo-list").html(formatToDos());
-
 
   // handle modifications to list item
   $("#todo-list").on("click", "li span", function() {
@@ -35,6 +40,7 @@ $(document).ready(function() {
   		$("input").val("");
   	}
   });
+
 });
 
 var todoList = [{name: "First todo", complete: false}];
