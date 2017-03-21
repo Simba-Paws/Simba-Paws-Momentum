@@ -90,6 +90,34 @@ ul li {
 	text-align: center;
 }
 
+
+.glyphicon-search {
+	color: #fff;
+	font-size: 18px;
+}
+
+#search-link-container {
+	position: fixed;
+	opacity: 0.75;
+	top: 10px;
+	left: 20px;
+}
+
+
+
+.search-input {
+	  height: 60px;
+    padding: 20px 2px 20px 33px;
+    z-index: 2;
+    background: 0 0;
+    border: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 20px;
+    outline: 0;
+}
+
  #todo-list {
  list-style-type: none;
  padding-left: 15px;
@@ -124,6 +152,34 @@ ul li {
 	position: fixed;
 	right: 15px;
 	bottom: 10px;
+}
+
+.search-input:focus {
+	  height: 60px;
+    padding: 20px 2px 20px 33px;
+    z-index: 2;
+    background: 0 0;
+    border: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 20px;
+    outline: 0;
+    border-bottom:  2px solid white;
+    padding-bottom: 20px;
+    opacity: 1;
+}
+
+.search-button {
+	background: transparent;
+	border: none !important;
+	font-size: 0;
+}
+
+.links a {
+	text-align: center;
+	text-transform:  uppercase;
+	font-size: 13px;
 }
 
 
