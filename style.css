@@ -57,27 +57,65 @@ ul li {
 	color: white;
 }
 
+
+#todo-list {
+	  max-height: 150px;
+    overflow-y: scroll;
+}
+
 .complete {
 	color: red;
 }
 
-#todo-list .complete {
+#todo-list .complete .list-item {
 	text-decoration: line-through;
 }
 
 .todoContainer {
     background-color: #111216;
     color:#999999;
-    width:350px;
+    width:250px;
     margin: 50px auto auto auto;
     padding-bottom:12px;
     opacity: 0.75;
     border-radius: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding-top: 15px;
+
 }
 
 #newItem {
 	text-align: center;
 }
 
+ #todo-list {
+ list-style-type: none;
+ padding-left: 15px;
+ }
+
+#submitButton {
+	background: none;
+	border: 1px solid white;
+	color: #fff;
+}
+
+#submitButton:hover,
+#submitButton:focus {
+	opacity: .5;
+	border: 1px solid white;
+	color: #fff;
+}
+
+#newItem input {
+	background: none;
+	color: #fff;
+	outline: none;
+}
+
+#newItem input:focus {
+	box-shadow: 0px 0px 7px 0px white;
+}
 
 
