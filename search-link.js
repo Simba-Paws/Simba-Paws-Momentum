@@ -1,14 +1,10 @@
 $(document).ready(function() {
+	console.log("Connected!");
 
-// $("form input").click(function() {
-// 	$(this).parent().addClass("search-underline").siblings().removeClass("search-underline")
-		
-// 		})
-
-
-		$("body").click(function(){
-	    $("input[type=text]").addClass("search-underline");
-	});
-
+  $(function(){
+      $(".expand-links").click(function(){
+          $(".links").toggle();
+      });
+  });
 });
 
