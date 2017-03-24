@@ -1,8 +1,8 @@
   var apiKey = "f27a663a728568282620c26af630aefb";
   var latitude = 0;
   var longitude = 0;
-  var unitSymbol = "C";
-  var units = "metric";
+  var unitSymbol = "&deg;F";
+  var units = "imperial";
   var weatherDesc = "clear sky";
 
 $(document).ready(function() {
@@ -33,25 +33,27 @@ function getWeather() {
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey + "&units=" + units, function(data) {
       console.log("https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey + "&units=" + units);
       $("#location-value").html(data.name + ", " + data.sys.country);
-      $("#temp-value").html(Math.round(data.main.temp) + unitSymbol);
+      $("#temp-value").html(Math.round(data.main.temp));
+      console.log(unitSymbol);
+      $("#temp-symbol").html(unitSymbol);
 			weatherDesc = data["weather"][0]["description"];
 			$("#description-value").html(weatherDesc);
     });
   }
 
  
-  $("#chgUnits").click(function() {
+  $("#temp-value").click(function() {
 
   console.log("chgUnits was clicked Units = " + units + " UnitSymbol = " + unitSymbol);
 
   if (units == "metric") {
     units = "imperial";
-    unitSymbol = "F";
-    $("#chgUnits").html("Metric");
+    unitSymbol = "&deg;F";
+    // $("#chgUnits").html("Metric");
   } else {
     units = "metric";
-    unitSymbol = "C";
-    $("#chgUnits").html("Farenheit");
+    unitSymbol = "&deg;C";
+    // $("#chgUnits").html("Farenheit");
   }
 
   getWeather();

@@ -5,12 +5,20 @@ body {
 	/*background-image: url(https://drscdn.500px.org/photo/123084989/q%3D80_m%3D2000/8824dbf1787af33499be7e27b18f6b32);*/
 }
 
+
+#clockContainer {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+
+}
+
+
 #headingText {
 	font-size: 60px;
 	font-weight: 700;
-	text-align: center;
 	color: #FFF;
-	margin-top: 10px;
 	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
 		 0px 8px  13px  rgba(0,0,0,0.1),
 		 0px 18px 23px  rgba(0,0,0,0.1);
@@ -19,7 +27,6 @@ body {
 #date {
 	font-size: 45px;
 	font-weight: 400;
-	text-align: center;
 	color: #FFF;
 	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
 	 0px 8px  13px  rgba(0,0,0,0.1),
@@ -31,9 +38,6 @@ body {
 #clock {
 	font-size: 150px;
 	font-weight: 700;
-	text-align: center;
-	padding-top: 10vh;
-	margin-bottom: 5px;
 	color: #FFF;
 	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
 	 0px 8px  13px  rgba(0,0,0,0.1),
@@ -41,10 +45,13 @@ body {
 
 }
 
-#tempBox {
+#tempContainer {
+	position: fixed;
+	top: 25px;
+	right: 5px;
 	color: white;
 	height: 100px;
-	padding-bottom:200px;
+	width: 200px;
 	display: inline;
 	font-size: 15px;
 	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
@@ -53,10 +60,25 @@ body {
 	line-height: 7.5px
 }
 
+#temp-value {
+
+	font-size: 25px;
+}
+
+#location-value{
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+#description-value {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+
 ul li {
 	color: white;
 }
-
 
 #todo-list {
 	  max-height: 150px;
