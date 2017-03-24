@@ -107,8 +107,8 @@ ul li {
 
 
 .search-input {
-	  height: 60px;
-    padding: 20px 2px 20px 33px;
+	  height: 20px;
+    padding: 20px 2px 20px 10px;
     z-index: 2;
     background: 0 0;
     border: none;
@@ -156,18 +156,7 @@ ul li {
 }
 
 .search-input:focus {
-	  height: 60px;
-    padding: 20px 2px 20px 33px;
-    z-index: 2;
-    background: 0 0;
-    border: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #fff;
-    line-height: 20px;
-    outline: 0;
     border-bottom:  2px solid white;
-    padding-bottom: 20px;
     opacity: 1;
 }
 
