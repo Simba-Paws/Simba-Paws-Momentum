@@ -7,7 +7,7 @@ $(document).ready(function() {
   });
 
   getTodoList();
-  $("#todo-list").html(formatToDos());
+  $("#todo-list").html(formatToDos(todoList));
 
   // handle modifications to list item
   $("#todo-list").on("click", "li span", function() {
@@ -82,22 +82,22 @@ function deleteItem(index) {
 }
 
 function printList() {
-	var todos = formatToDos();
+	var todos = formatToDos(todoList);
 	$("#todo-list").html(todos);
 }
 
-function formatToDos() {
+function formatToDos(lst) {
   var todos = "";
   var className = "complete";
 
-  for (var i = 0; i < todoList.length; i++) {
-  	if (todoList[i].complete) {
+  for (var i = 0; i < lst.length; i++) {
+  	if (lst[i].complete) {
   		className = "complete";
   	}
   	else {
   		className = "";
   	}
-  	todos += "<li class=" + className + ">" + "<span class=\"deleteTodo\">&#9747</span>    "   +  "<span class=\"checkBox\"> &#9634 </span>    " + "<span class=\"list-item\">" + todoList[i].name  + "</span>" + "</li>";
+  	todos += "<li class=" + className + ">" + "<span class=\"deleteTodo\">&#9747</span>    "   +  "<span class=\"checkBox\"> &#9634 </span>    " + "<span class=\"list-item\">" + lst[i].name  + "</span>" + "</li>";
   }
 
   return todos;
