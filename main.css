@@ -1,6 +1,8 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
+
+   MODIFIED FOR THIS WEBSITE
 */
 
 html, body, div, span, applet, object, iframe,
@@ -15,10 +17,12 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video,
+input {
 	margin: 0;
 	padding: 0;
 	border: 0;
+  outline: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -45,6 +49,12 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+    -mox-box-sizing: border-box;
+  color: #fff;
 }
 
 /*
@@ -90,13 +100,40 @@ PAGE STRUCTURE
 
 /*
 ==========
-BUTTONS
+FORM ELEMENTS
 ==========
 */
 
+.btn {
+  cursor: pointer;
+}
+
+.btn-toggle {
+ /*styling for "buttons" to open and close settings, todos, links, etc*/
+}
+
+.primary-input {
+  border-bottom: 2.5px solid #fff;
+  background: none;
+}
+
+/*
+==========
+TYPOGRAPHY
+==========
+*/
 
 
 /*
 ==========
+PANELS
 ==========
 */
+
+
+/*
+temp styles
+*/
+body {
+  background: black;
+}

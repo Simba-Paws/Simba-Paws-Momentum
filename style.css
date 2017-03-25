@@ -17,7 +17,6 @@ body {
 #headingText {
 	font-size: 60px;
 	font-weight: 700;
-	color: #FFF;
 	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
 		 0px 8px  13px  rgba(0,0,0,0.1),
 		 0px 18px 23px  rgba(0,0,0,0.1);
@@ -26,7 +25,6 @@ body {
 #date {
 	font-size: 45px;
 	font-weight: 400;
-	color: #FFF;
 	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
 	 0px 8px  13px  rgba(0,0,0,0.1),
 	 0px 18px 23px  rgba(0,0,0,0.1);
@@ -37,7 +35,6 @@ body {
 #clock {
 	font-size: 150px;
 	font-weight: 700;
-	color: #FFF;
 	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
 	 0px 8px  13px  rgba(0,0,0,0.1),
 	 0px 18px 23px  rgba(0,0,0,0.1);
@@ -45,7 +42,6 @@ body {
 }
 
 #tempContainer {
-	color: white;
 	height: 100px;
 	width: 200px;
 	display: inline;
@@ -69,11 +65,6 @@ body {
 #description-value {
 	font-size: 11px;
 	text-transform: uppercase;
-}
-
-
-ul li {
-	color: white;
 }
 
 #todo-list {
@@ -130,11 +121,7 @@ ul li {
     z-index: 2;
     background: 0 0;
     border: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #fff;
     line-height: 20px;
-    outline: 0;
 }
 
  #todo-list {
@@ -152,12 +139,6 @@ ul li {
 	opacity: .5;
 	border: 1px solid white;
 	color: #fff;
-}
-
-#newItem input {
-	background: none;
-	color: #fff;
-	outline: none;
 }
 
 #newItem input:focus {
@@ -250,22 +231,21 @@ ul li {
 label {
   font-size: 40px;
   font-weight: 200;
-  color: #fff;
 }
 
 #focus-input{
-	border-top: none;
-	border-left: none;
-	border-right: none;
-  border-bottom: 2.5px solid white;
 	height: 20px;
 	width: 400px;
   padding: 20px 2px 20px 10px;
   z-index: 2;
-  background: 0 0;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #fff;
   line-height: 20px;
   outline: 0;
+}
+
+.search-input {
+	  height: 20px;
+    padding: 20px 2px 20px 10px;
+    z-index: 2;
+    border: none;
+    line-height: 20px;
 }

@@ -17,12 +17,12 @@
 
 		<!-- LINKS -->
 		<div class="top left container">
-			<p class="expand-links">Links</p>
+			<p class="expand-links btn btn-toggle">Links</p>
 			<div id="search-link-container">
 				<form class="search-form" action="http://www.google.com/search" method="get">
 					<span class="search-underline"></span>
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-					<input type="text" class="search-input" name="q" autocomplete="off">
+					<input type="text" class="search-input primary-input" name="q" autocomplete="off">
 					<button class="search-button"></button>
 				</form>
 
@@ -77,12 +77,11 @@
 
 		<!-- TO DO LIST  -->
 		<div class="bottom right container">
-			<h3 class="expand-todo">Todo</h3>
-
+			<p class="expand-todo btn btn-toggle">Todo</p>
 			<div id="todo" class="todoContainer">
 				<ul id="todo-list"></ul>
 				<form id="newItem" action="">
-					<input type="text" placeholder="Enter todo" id="todo-input" val="">
+					<input class="primary-input" type="text" placeholder="Enter todo" id="todo-input" val="">
 					<button id="submitButton">Submit</button>
 				</form>
 			 </div>
