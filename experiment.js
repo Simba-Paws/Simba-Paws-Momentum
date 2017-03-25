@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
-  // main focus
+  // initialize main focus
   var mainFocus = Object.create(List);
   mainFocus.setup("focus-list", "#focus-list");
 
+  // handler to toggle and delete main focus
   $(mainFocus.target).on("click", "li span", function() {
     var span = this;
     mainFocus.handleModifications(span);
   });
 
+  // handler to create new main focus
   $("#focus-query").submit(function(evt) {
     evt.preventDefault();
     if (mainFocus.list.length === 0) {
@@ -17,21 +19,24 @@ $(document).ready(function() {
     $("#focus-input").val("");
   });
 
-  // todo list
+  // initialize todo list
   var toDos = Object.create(List);
   toDos.setup("todo-list", "#todo-list");
 
+  // handler to toggle and delete list items
   $(toDos.target).on("click", "li span", function() {
     var span = this;
     toDos.handleModifications(span);
   });
 
+  // handler to create new todo
   $("#newItem").submit(function(evt) {
     evt.preventDefault();
     toDos.addItem($("#todo-input").val());
     $("#todo-input").val("");
   });
 
+  // handler to hide and show todo list
   $(".expand-todo").on("click", function() {
     $(".todoContainer").toggle();
   });
@@ -40,9 +45,9 @@ $(document).ready(function() {
 
 var List = {
   setup: function(loc, target) {
-    this.loc = loc;
-    this.target = target;
-    this.list = this.getList();
+    this.loc = loc; // name of list key in local storage
+    this.target = target; // id of ul in index.html
+    this.list = this.getList(); // array of list items
     this.updateDisplay();
   },
   getList: function() {
@@ -74,10 +79,10 @@ var List = {
   },
   handleModifications: function(span) {
     var index = $(span).parent().index();
-    if ($(span).hasClass("checkBox")) {
+    if ($(span).hasClass("checkBox")) { // toggle complete
       this.list[index].complete = !this.list[index].complete;
     }
-    else if ($(span).hasClass("delete")) {
+    else if ($(span).hasClass("delete")) { // delete todo from list
       this.list.splice(index, 1);
     }
     localStorage.setItem(this.loc, JSON.stringify(this.list));
