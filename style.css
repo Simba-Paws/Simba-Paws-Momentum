@@ -6,16 +6,11 @@ body {
 
 }
 
-ul {
-	list-style-type: none;
-}
-
 #clockContainer {
     width: 600px;
     margin: 0 auto;
     text-align: center;
     padding-top: 200px;
-
 }
 
 
@@ -50,9 +45,6 @@ ul {
 }
 
 #tempContainer {
-	position: fixed;
-	top: 25px;
-	right: 5px;
 	color: white;
 	height: 100px;
 	width: 200px;
@@ -246,7 +238,7 @@ ul li {
 	display: none;
 }
 
-#focus {
+#focusContainer {
   width: 600px;
   margin: 0 auto;
   text-align: center;

@@ -1,94 +1,97 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-	<title>Momentum-Clone-App</title>
-	<link href="bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="font-awesome.min.css">
-	<script src="jquery-3.1.1.min.js"></script>
-	<script src="bootstrap.min.js"></script>
+	<head>
+		<title>Momentum-Clone-App</title>
+		<link rel="stylesheet" href="main.css">
+	<!--
+		<link href="bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="font-awesome.min.css">
+	-->
+		<script src="jquery-3.1.1.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+	</head>
 
+	<body>
 
-</head>
+		<!-- LINKS -->
+		<div class="top left container">
+			<p class="expand-links">Links</p>
+			<div id="search-link-container">
+				<form class="search-form" action="http://www.google.com/search" method="get">
+					<span class="search-underline"></span>
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					<input type="text" class="search-input" name="q" autocomplete="off">
+					<button class="search-button"></button>
+				</form>
 
+				<div class="links">
+					<div>
+						<a target="_blank" href="">Chrome Tab</a>
+						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</div>
+					<div>
 
+						<a href="http://gmail.com">Gmail</a>
+						<img src="https://icons.duckduckgo.com/ip2/mail.google.com/.ico" alt="" height="16" width="16">
+					</div>
+					<div>
+						<a href="chrome://apps" id="app-return" class="local"><i class="icon icon-th"></i> Apps</a>
+					</div>
+				</div>
+		</div>
 
-<body>
-
-	<div id="tempContainer">
+		<!-- WEATHER -->
+		<div class="top right container" id="tempContainer">
 			<p class = "text-center"><span id ="temp-value" class="text-center">Temp goes here</span><span id="temp-symbol">F</span></p>
 			<p id ="location-value" class = "text-center">Location goes here</p>
 			<p id ="description-value" class="text-center">Description goes here</p>
 		</div>
-	</div>
 
-	<div id="clockContainer">
+		<!-- CLOCK -->
+		<div class="middle center container" id="clockContainer">
 			<h1 id="date"></h1>
 			<h1 id="clock"></h1>
 			<h1 id="headingText"> Hello, Friend.</h1>
-	</div>
-
-<div id="focus">
-	<form id="focus-query">
-		<label>What's your main focus for today?</label>
-		<div>
-			<input id="focus-input" type="text" val="">
 		</div>
-		<button id="focusButton">Submit</button>
-	</form>
-	<div id="focus-display">
-		<ul id="focus-list">
 
-		</ul>
-	</div>
-</div>
+		<!-- MAIN FOCUS -->
+		<div class="top center container" id="focusContainer">
+			<form id="focus-query">
+				<label>What's your main focus for today?</label>
+				<input id="focus-input" type="text" val="">
+				<button id="focusButton">Submit</button>
+			</form>
 
-<h3 class="expand-todo">Todo</h3>
-<div id="todo" class="todoContainer">
-	<ul id="todo-list">
-	</ul>
-
-
-		<form id="newItem" action="">
-			<input type="text" placeholder="Enter todo" id="todo-input" val="">
-			<button id="submitButton">Submit</button>
-		</form>
-  </div>
-
-	<p class="expand-links">Links</p>
-	<div id="search-link-container">
-		<form class="search-form" action="http://www.google.com/search" method="get">
-			<span class="search-underline"></span>
-			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-			<input type="text" class="search-input" name="q" autocomplete="off">
-			<button class="search-button"></button>
-		</form>
-
-		<div class="links">
-			<div>
-				<a target="_blank" href="">Chrome Tab</a>
-				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			</div>
-			<div>
-
-				<a href="http://gmail.com">Gmail</a>
-				<img src="https://icons.duckduckgo.com/ip2/mail.google.com/.ico" alt="" height="16" width="16">
-			</div>
-			<div>
-				<a href="chrome://apps" id="app-return" class="local"><i class="icon icon-th"></i> Apps</a>
+			<div id="focus-display">
+				<ul id="focus-list"></ul>
 			</div>
 		</div>
 
-<script type="text/javascript" src="todo-widgets.js"></script>
-<script type="text/javascript" src="search-link.js"></script>
+		<!-- SETTINGS -->
+		<div class="bottom left container">settings</div>
 
-<script type="text/javascript" src="clock.js"></script>
-<script type="text/javascript" src="weather.js"></script>
+		<!-- QUOTE -->
+		<div class="bottom center container">quotes</div>
 
+		<!-- TO DO LIST  -->
+		<div class="bottom right container">
+			<h3 class="expand-todo">Todo</h3>
 
-</body>
+			<div id="todo" class="todoContainer">
+				<ul id="todo-list"></ul>
+				<form id="newItem" action="">
+					<input type="text" placeholder="Enter todo" id="todo-input" val="">
+					<button id="submitButton">Submit</button>
+				</form>
+			 </div>
+		</div>
 
+		<script type="text/javascript" src="todo-widgets.js"></script>
+		<script type="text/javascript" src="search-link.js"></script>
 
-
-
+		<script type="text/javascript" src="clock.js"></script>
+		<script type="text/javascript" src="weather.js"></script>
+	</body>
 </html>
