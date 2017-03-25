@@ -8,7 +8,7 @@
 "manifest_version": 2,
 
 "background": {
-	"scripts": ["clock.js", "weather.js", "todo.js","focus-todo.js"]
+	"scripts": ["clock.js", "weather.js", "experiment.js"]
 },
 
 "browser_action": {
