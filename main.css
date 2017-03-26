@@ -136,6 +136,8 @@ p {
 	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 							 0px 8px 13px rgba(0,0,0,0.1),
 							 0px 18px 23px rgba(0,0,0,0.1);
+	margin-bottom: 3px;
+	margin-top: 3px;
 }
 
 /*
@@ -143,6 +145,25 @@ p {
 PANELS
 ==========
 */
+
+.panel {
+	opacity: 0.85;
+	border-radius: 10px;
+	background-color: #111216;
+	color: #999;
+	display: none;
+}
+
+#todo-panel {
+	width: 250px;
+	max-height: 500px;
+	margin-top: 50px;
+	padding-top: 15px;
+	padding-bottom: 12px;
+	bottom: 50px;
+	left: -15px;
+	position: absolute;
+}
 
 /*
 ==========
@@ -167,4 +188,31 @@ CLOCK/GREETING
 #greeting {
 	font-size: 60px;
 	font-weight: 700;
+}
+
+/* +++++
+WEATHER
++++++ */
+
+#tempContainer {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+#temp-value {
+	font-size: 25px;
+}
+
+/* +++++
+TO DO LIST
++++++ */
+
+#todo-list li.complete span {
+	color: #ddd;
+}
+
+#todo-list .complete .list-item {
+	text-decoration: line-through;
+	font-style: italic;
 }
