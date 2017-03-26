@@ -71,7 +71,6 @@ PAGE STRUCTURE
 */
 
 .container {
-  border: 1px solid green;
   position: fixed;
 	padding: 25px;
 }
@@ -82,6 +81,7 @@ PAGE STRUCTURE
 
 .bottom {
   bottom: 0;
+	max-height: 75px;
 }
 
 .left {
@@ -107,6 +107,10 @@ PAGE STRUCTURE
 	text-align: center;
 }
 
+.below-center-y {
+	bottom: 75px;
+}
+
 /*
 ==========
 FORM ELEMENTS
@@ -118,12 +122,38 @@ FORM ELEMENTS
 }
 
 .btn-toggle {
- /*styling for "buttons" to open and close settings, todos, links, etc*/
+ font-weight: 500;
+
+}
+
+.btn-hddn {
+	display: none;
 }
 
 .primary-input {
   border-bottom: 2.5px solid #fff;
   background: none;
+}
+
+.panel-btn {
+	/* styling for buttons to add input, etc. */
+	background: none;
+	border: 1px solid white;
+}
+
+.panel-btn:hover,
+.panel-btn:focus {
+	opacity: 0.5;
+	border: 1px solid white;
+}
+
+.panel-input {
+	background: 0 0;
+	border: none;
+}
+
+.panel-input:focus {
+	box-shadow: 0px 0px 7px 0px #fff;
 }
 
 /*
@@ -147,22 +177,21 @@ PANELS
 */
 
 .panel {
-	opacity: 0.85;
-	border-radius: 10px;
 	background-color: #111216;
 	color: #999;
+	text-align: left;
+	opacity: 0.85;
+	border-radius: 5px;
+	padding: 15px;
+	position: fixed;
 	display: none;
 }
 
-#todo-panel {
-	width: 250px;
-	max-height: 500px;
-	margin-top: 50px;
-	padding-top: 15px;
-	padding-bottom: 12px;
-	bottom: 50px;
-	left: -15px;
-	position: absolute;
+.panel input {
+	height: 20px;
+	line-height: 20px;
+	padding: 20px 2px 20px 10px;
+	z-index: 2;
 }
 
 /*
@@ -209,10 +238,65 @@ TO DO LIST
 +++++ */
 
 #todo-list li.complete span {
-	color: #ddd;
+	color: #666;
 }
 
 #todo-list .complete .list-item {
 	text-decoration: line-through;
 	font-style: italic;
 }
+
+.todoContainer {
+	bottom: 80px;
+	right: 15px;
+}
+
+/* +++++
+FOCUS
++++++ */
+
+#focusContainer {
+	font-size: 40px;
+	font-weight: 600;
+	width: 800px;
+}
+
+#focusContainer label {
+	font-weight: 200;
+}
+
+/* +++++
+LINKS
++++++ */
+
+ #search-input {
+	 border: none;
+	 z-index: 2;
+ }
+
+ #search-input:focus {
+	 border-bottom: 2px solid white;
+ }
+
+ .glyphicon-search {
+ 	font-weight: 700;
+ }
+
+ .glyphicon-plus {
+ 	padding-left: 15px;
+ 	opacity: .75;
+ }
+
+ .links {
+	 width: 200px;
+	 left: 15px;
+ }
+
+ .links a {
+	 opacity: 0.75;
+	 text-decoration: none;
+ }
+
+ .links a:hover {
+	 opacity: 1;
+ }
