@@ -81,7 +81,7 @@ PAGE STRUCTURE
 
 .bottom {
   bottom: 0;
-	max-height: 75px;
+	max-height: 100px;
 }
 
 .left {
@@ -108,7 +108,7 @@ PAGE STRUCTURE
 }
 
 .below-center-y {
-	bottom: 75px;
+	bottom: 100px;
 }
 
 /*
@@ -298,3 +298,12 @@ LINKS
  .links a:hover {
 	 opacity: 1;
  }
+
+ /* +++++
+QUOTES
++++++ */
+
+#quote-citation {
+	display: none;
+}
+
