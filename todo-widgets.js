@@ -4,11 +4,31 @@ $(document).ready(function() {
   var mainFocus = Object.create(List);
   mainFocus.setup("focus-list", "#focus-list");
 
+  // load focus-query if no focus 
+  if (mainFocus.list.length === 0) {
+    $("#focus-query").show();
+  }
+
   // handler to toggle and delete main focus
-  $(mainFocus.target).on("click", "li span", function() {
+  // $(mainFocus.target).on("click", "li span", function() {
+  //   var span = this;
+  //   mainFocus.handleModifications(span);
+  //   $("#focus-query").show();
+  // });
+
+  // handler for delete
+  $(mainFocus.target).on("click", ".delete", function() {
+    var span = this;
+    mainFocus.handleModifications(span);
+    $("#focus-query").show();
+  });
+
+  // Handler for toggle complete
+    $(mainFocus.target).on("click", ".checkBox", function() {
     var span = this;
     mainFocus.handleModifications(span);
   });
+
 
   // handler to create new main focus
   $("#focus-query").submit(function(evt) {
@@ -17,7 +37,13 @@ $(document).ready(function() {
       mainFocus.addItem($("#focus-input").val());
     }
     $("#focus-input").val("");
+    $('#focus-query').hide();
   });
+
+  // handler to show display / unhide focus input
+  // $(".delete").on("click", function() {
+  //   $("#focus-query").show();
+  // });  
 
   // initialize todo list
   var toDos = Object.create(List);
@@ -70,8 +96,8 @@ var List = {
     for (var i = 0; i < this.list.length; i++) {
       className = this.list[i].complete ? "complete" : "";
       todos += "<li class=" + className + ">"
-              + "<span class=\"delete\">&#9747</span>"
-              + "<span class=\"checkBox\"> &#9634 </span>"
+              + "<span class=\"delete glyphicon glyphicon-remove\"></span>"
+              + "<span class=\"checkBox glyphicon glyphicon-unchecked \"></span>"
               + "<span class=\"list-item\">" + this.list[i].name + "</span>"
             + "</li>";
     }
