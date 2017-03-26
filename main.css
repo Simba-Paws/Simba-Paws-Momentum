@@ -1,0 +1,309 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+   MODIFIED FOR THIS WEBSITE
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+    -mox-box-sizing: border-box;
+  color: #fff;
+}
+
+/*
+temp styles
+*/
+html {
+  background: url(https://drscdn.500px.org/photo/116050935/q%3D80_m%3D2000/04fa01d22b415d234b1289bd1ba85320) no-repeat center center fixed;
+}
+
+/*
+==========
+PAGE STRUCTURE
+==========
+*/
+
+.container {
+  position: fixed;
+	padding: 25px;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+	max-height: 100px;
+}
+
+.left {
+  left: 0;
+  text-align: left;
+}
+
+.center-x {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.right {
+  right: 0;
+  text-align: right;
+}
+
+.center-xy {
+  top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.below-center-y {
+	bottom: 100px;
+}
+
+/*
+==========
+TYPOGRAPHY
+==========
+*/
+
+p {
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+							 0px 8px 13px rgba(0,0,0,0.1),
+							 0px 18px 23px rgba(0,0,0,0.1);
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+
+/*
+==========
+FORM ELEMENTS
+==========
+*/
+
+.btn {
+  cursor: pointer;
+}
+
+.btn-toggle {
+ font-weight: 500;
+
+}
+
+.btn-hddn {
+	display: none;
+}
+
+.primary-input {
+  border-bottom: 2.5px solid #fff;
+  background: none;
+}
+
+.panel-btn {
+	/* styling for buttons to add input, etc. */
+	background: none;
+	border: 1px solid white;
+	padding: 5px;
+}
+
+.panel-btn:hover,
+.panel-btn:focus {
+	opacity: 0.5;
+	border: 1px solid white;
+}
+
+.panel-input {
+	background: 0 0;
+	border: none;
+}
+
+.panel-input:focus {
+	box-shadow: 0px 0px 7px 0px #fff;
+}
+
+/*
+==========
+PANELS
+==========
+*/
+
+.panel {
+	background-color: #111216;
+	color: #999;
+	text-align: left;
+	opacity: 0.85;
+	border-radius: 5px;
+	padding: 15px;
+	position: fixed;
+	display: none;
+}
+
+.panel input {
+	padding: 5px;
+	z-index: 2;
+	margin-top: 10px;
+}
+
+/*
+==========
+WIDGETS
+==========
+*/
+
+/* +++++
+CLOCK/GREETING
++++++ */
+
+#date {
+	font-size: 45px;
+	font-weight: 400;
+}
+
+#clock {
+	font-size: 150px;
+	font-weight: 700;
+}
+
+#greeting {
+	font-size: 60px;
+	font-weight: 700;
+}
+
+/* +++++
+WEATHER
++++++ */
+
+#tempContainer {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+#temp-value {
+	font-size: 25px;
+}
+
+/* +++++
+TO DO LIST & FOCUS
++++++ */
+
+#todo-list li.complete span,
+#focus-list li.complete span {
+	color: #666;
+}
+
+#todo-list .complete .list-item,
+#focus-list .complete .list-item {
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+.todoContainer {
+	bottom: 80px;
+	right: 15px;
+}
+
+#focusContainer {
+	font-size: 40px;
+	font-weight: 600;
+	width: 800px;
+}
+
+#focusContainer label {
+	font-weight: 200;
+}
+
+/* +++++
+LINKS
++++++ */
+
+ #search-input {
+	 border: none;
+	 z-index: 2;
+ }
+
+ #search-input:focus {
+	 border-bottom: 2px solid white;
+ }
+
+ .glyphicon-search {
+ 	font-weight: 700;
+ }
+
+ .glyphicon-plus {
+ 	padding-left: 15px;
+ 	opacity: .75;
+ }
+
+ .links {
+	 width: 200px;
+	 left: 15px;
+ }
+
+ .links a {
+	 opacity: 0.75;
+	 text-decoration: none;
+ }
+
+ .links a:hover {
+	 opacity: 1;
+ }
+
+ /* +++++
+QUOTES
++++++ */
+
+#quote-citation {
+	display: none;
+}
+

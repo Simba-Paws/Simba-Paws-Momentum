@@ -26,7 +26,4 @@ function updateClock(){
 	timeString = [hour,minute].join(":");
 
 	document.getElementById("clock").innerHTML = timeString;
-
 }
-
-
