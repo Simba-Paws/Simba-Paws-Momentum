@@ -1,4 +1,283 @@
 body {
 /*	background-image: url("https://source.unsplash.com/category/nature/1920x1080/daily");*/
 	background-image: url(https://drscdn.500px.org/photo/116050935/q%3D80_m%3D2000/04fa01d22b415d234b1289bd1ba85320);
+
+
+}
+
+ul {
+	list-style-type: none;
+}
+
+#clockContainer {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+
+}
+
+
+#headingText {
+	font-size: 60px;
+	font-weight: 700;
+	color: #FFF;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+		 0px 8px  13px  rgba(0,0,0,0.1),
+		 0px 18px 23px  rgba(0,0,0,0.1);
+}
+
+#date {
+	font-size: 45px;
+	font-weight: 400;
+	color: #FFF;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+	 0px 8px  13px  rgba(0,0,0,0.1),
+	 0px 18px 23px  rgba(0,0,0,0.1);
+
+}
+
+
+#clock {
+	font-size: 150px;
+	font-weight: 700;
+	color: #FFF;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+	 0px 8px  13px  rgba(0,0,0,0.1),
+	 0px 18px 23px  rgba(0,0,0,0.1);
+
+}
+
+#tempContainer {
+	position: fixed;
+	top: 25px;
+	right: 5px;
+	color: white;
+	height: 100px;
+	width: 200px;
+	display: inline;
+	font-size: 15px;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+	 0px 8px  13px  rgba(0,0,0,0.1),
+	 0px 18px 23px  rgba(0,0,0,0.1);
+	line-height: 7.5px
+}
+
+#temp-value {
+
+	font-size: 25px;
+}
+
+#location-value{
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+#description-value {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+
+ul li {
+	color: white;
+}
+
+#todo-list {
+	  max-height: 150px;
+    overflow-y: scroll;
+}
+
+.complete {
+	color: red;
+}
+
+.complete .list-item {
+	text-decoration: line-through;
+
+}
+
+.todoContainer {
+    background-color: #111216;
+    color:#999999;
+    width:250px;
+    margin: 50px auto auto auto;
+    padding-bottom:12px;
+    opacity: 0.85;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    padding-top: 15px;
+    display: none;
+
+}
+
+#newItem {
+	text-align: center;
+}
+
+
+.glyphicon-search {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+#search-link-container {
+	position: fixed;
+	top: 10px;
+	left: 70px;
+}
+
+
+
+.search-input {
+	  height: 20px;
+    padding: 20px 2px 20px 10px;
+    z-index: 2;
+    background: 0 0;
+    border: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 20px;
+    outline: 0;
+}
+
+ #todo-list {
+ padding-left: 15px;
+ }
+
+#submitButton {
+	background: none;
+	border: 1px solid white;
+	color: #fff;
+}
+
+#submitButton:hover,
+#submitButton:focus {
+	opacity: .5;
+	border: 1px solid white;
+	color: #fff;
+}
+
+#newItem input {
+	background: none;
+	color: #fff;
+	outline: none;
+}
+
+#newItem input:focus {
+	box-shadow: 0px 0px 7px 0px white;
+}
+
+.expand-todo {
+	color: #fff;
+	font-size: 16px;
+	position: fixed;
+	right: 25px;
+	bottom: 10px;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+		 0px 8px  13px  rgba(0,0,0,0.1),
+		 0px 18px 23px  rgba(0,0,0,0.1);
+}
+
+.search-input:focus {
+    border-bottom:  2px solid white;
+    opacity: 1;
+}
+
+.search-button {
+	background: transparent;
+	border: none !important;
+	font-size: 0;
+}
+
+.links  {
+	position: fixed;
+	left: 6px;
+	text-align: left;
+	font-size: 14px;
+	background-color: #111216;
+	border-radius: 5px;
+	width: 200px;
+	height: 80px;
+	opacity: .85;
+	display: none;
+}
+
+.links a {
+	color: #fff;
+	padding-left: 25px ;
+	opacity: .75;
+  text-decoration: none;
+}
+
+.links a:hover {
+	color: #fff;
+	padding-left: 25px ;
+	opacity: 1;
+}
+
+.expand-links {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	position: fixed;
+	top: 25px;
+	left: 16px;
+	opacity: .8;
+	text-shadow: 0px 4px  3px   rgba(0,0,0,0.4),
+		 0px 8px  13px  rgba(0,0,0,0.1),
+		 0px 18px 23px  rgba(0,0,0,0.1);
+}
+
+.glyphicon-plus {
+	padding-left: 15px;
+	color: #fff;
+	opacity: .75;
+}
+
+
+/* Focus*/
+
+#focusButton {
+	display: none;
+}
+
+#focus {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+label {
+  font-size: 40px;
+  font-weight: 200;
+  color: #fff;
+}
+
+#focus-input{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+  border-bottom: 2.5px solid white;
+	height: 20px;
+	width: 400px;
+  padding: 20px 2px 20px 10px;
+  z-index: 2;
+  background: 0 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  line-height: 20px;
+  outline: 0;
+}
+
+#focus-query {
+	display: none;
 }

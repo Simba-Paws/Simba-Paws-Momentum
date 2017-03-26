@@ -234,14 +234,16 @@ WEATHER
 }
 
 /* +++++
-TO DO LIST
+TO DO LIST & FOCUS
 +++++ */
 
-#todo-list li.complete span {
+#todo-list li.complete span,
+#focus-list li.complete span {
 	color: #666;
 }
 
-#todo-list .complete .list-item {
+#todo-list .complete .list-item,
+#focus-list .complete .list-item {
 	text-decoration: line-through;
 	font-style: italic;
 }
@@ -250,10 +252,6 @@ TO DO LIST
 	bottom: 80px;
 	right: 15px;
 }
-
-/* +++++
-FOCUS
-+++++ */
 
 #focusContainer {
 	font-size: 40px;
