@@ -267,6 +267,32 @@ TO DO LIST & FOCUS
 	font-weight: 200;
 }
 
+
+.todoContainer .list-item {
+	padding-left: 15px;
+	padding-right: 150px;
+}
+
+#todo-input {
+	width: 200px;
+}
+
+#submitButton {
+	display: none;
+}
+
+
+
+#focusContainer .list-item {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#focusContainer .checkBox, .delete {
+font-size: 20px;
+}
+
+
 /* +++++
 LINKS
 +++++ */
@@ -280,14 +306,11 @@ LINKS
 	 border-bottom: 2px solid white;
  }
 
- .glyphicon-search {
- 	font-weight: 700;
- }
-
- .glyphicon-plus {
- 	padding-left: 15px;
- 	opacity: .75;
- }
+.search-form {
+	position: fixed;
+	left: 100px;
+	top: 27px;
+}
 
  .links {
 	 width: 200px;

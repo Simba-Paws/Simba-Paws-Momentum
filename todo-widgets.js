@@ -78,9 +78,9 @@ var List = {
     for (var i = 0; i < this.list.length; i++) {
       className = this.list[i].complete ? "complete" : "";
       todos += "<li class=" + className + ">"
-              + "<span class=\"delete\">&#9747</span>" /*glyphicon glyphicon -remove*/
-              + "<span class=\"checkBox\">&#9634</span>" /*glyphicon glyphicon-unchecked*/
+              + "<span class=\"checkBox\"><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i></span>" /*&#9634<*/
               + "<span class=\"list-item\">" + this.list[i].name + "</span>"
+              + "<span class=\"delete\"><i class=\"fa fa-minus-square-o\" aria-hidden=\"true\"></i></span>" /*&#9747*/
             + "</li>";
     }
     $(this.target).html(todos);
