@@ -5,10 +5,9 @@ $(document).ready(function() {
     $("#quote-author").html(data.contents.quotes[0].author);
   });
 
-$("#quotes").hover(function() {
+$("#quote-container").hover(function() {
 	$("#quote-citation").toggle();
+  $("#quote-container").css("max-height", "150px");
 });
 
 });
-
-		
