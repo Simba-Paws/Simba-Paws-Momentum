@@ -153,12 +153,15 @@ FORM ELEMENTS
   background: none;
 }
 
+/*
+NOT CURRENTLY BEING USED
 .panel-btn {
-	/* styling for buttons to add input, etc. */
+	/* styling for buttons to add input, etc.
 	background: none;
 	border: 1px solid white;
 	padding: 5px;
 }
+*/
 
 .panel-btn:hover,
 .panel-btn:focus {
@@ -333,4 +336,3 @@ QUOTES
 #quote-citation {
 	display: none;
 }
-
