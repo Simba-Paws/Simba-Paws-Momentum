@@ -247,6 +247,7 @@ TO DO LIST & FOCUS
 #todo-list li.complete span,
 #focus-list li.complete span {
 	color: #666;
+	opacity: 0.5;
 }
 
 #todo-list .complete .list-item,
@@ -273,7 +274,22 @@ TO DO LIST & FOCUS
 
 .todoContainer .list-item {
 	padding-left: 15px;
-	padding-right: 150px;
+
+}
+
+.todoContainer .delete {
+	position: fixed;
+	right: 30px;
+	font-size: 16px;
+	opacity: 0.5;
+}
+
+.todoContainer .checkBox:hover {
+	opacity: 1;
+}
+
+.todoContainer .delete:hover {
+	opacity: 1;
 }
 
 #todo-input {
@@ -283,8 +299,6 @@ TO DO LIST & FOCUS
 #submitButton {
 	display: none;
 }
-
-
 
 #focusContainer .list-item {
 	padding-left: 20px;
