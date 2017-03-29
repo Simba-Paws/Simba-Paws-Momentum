@@ -74,11 +74,14 @@ var List = {
     }
   },
   updateDisplay: function() {
-    var todos = "", className;
+    var todos = "", className = "", icon = "fa-square-o";
     for (var i = 0; i < this.list.length; i++) {
-      className = this.list[i].complete ? "complete" : "";
+      if (this.list[i].complete) {
+        className = "complete";
+        icon = "fa-check-square-o";
+      }
       todos += "<li class=" + className + ">"
-              + "<span class=\"checkBox\"><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i></span>" /*&#9634<*/
+              + "<span class=\"checkBox\"><i class=\"fa " + icon + "\" aria-hidden=\"true\"></i></span>" /*&#9634<*/
               + "<span class=\"list-item\">" + this.list[i].name + "</span>"
               + "<span class=\"delete\"><i class=\"fa fa-minus-square-o\" aria-hidden=\"true\"></i></span>" /*&#9747*/
             + "</li>";
@@ -98,7 +101,7 @@ var List = {
   }
 };
 
-// additional functions specific to main focus 
+// additional functions specific to main focus
 var Focus = Object.create(List);
 Focus.setDivs = function(query_id, display_id) {
   this.query_id = query_id;
