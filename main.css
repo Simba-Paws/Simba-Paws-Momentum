@@ -61,7 +61,9 @@ table {
 temp styles
 */
 html {
-  background: url(https://drscdn.500px.org/photo/116050935/q%3D80_m%3D2000/04fa01d22b415d234b1289bd1ba85320) no-repeat center center fixed;
+
+ /* background: url(https://drscdn.500px.org/photo/116050935/q%3D80_m%3D2000/04fa01d22b415d234b1289bd1ba85320) no-repeat center center fixed;*/
+ /* background-image: url("https://source.unsplash.com/category/nature/1920x1080/daily");*/
 }
 
 /*
