@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 $("#quote-container").hover(function() {
 	$("#quote-citation").toggle();
-  $("#quote-container").css("max-height", "150px");
+  $("#quote-container").css("max-height", "92px");
 });
 
 });

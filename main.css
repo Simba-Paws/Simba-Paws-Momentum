@@ -246,6 +246,12 @@ CLOCK/GREETING
   }
 }
 
+@media screen and (max-height:600px) {  
+  #clock {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 600px){
   #clock  {
     font-size: 100px;
@@ -268,6 +274,18 @@ CLOCK/GREETING
 #greeting {
 	white-space: nowrap;
 	font-weight: 700;
+}
+
+@media screen and (max-width:599px) {  
+  #greeting {
+    display: none;
+  }
+}
+
+@media screen and (max-height:600px) {  
+  #greeting {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 200px){
@@ -324,12 +342,12 @@ TO DO LIST & FOCUS
 }
 
 #focusContainer {
-	position: fixed;
-	bottom: 75px;
+
 	font-size: 40px;
 	font-weight: 600;
 	width: 800px;
 }
+
 
 @media screen and (max-width: 600px){
   #focusContainer {
@@ -342,6 +360,13 @@ TO DO LIST & FOCUS
     font-size: 40px;
   }
 }
+
+@media screen and (max-height: 600px){
+  #focusContainer {
+    font-size: 20px;
+  }
+}
+
 
 #focusContainer label {
 	font-weight: 200;
