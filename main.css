@@ -83,7 +83,6 @@ PAGE STRUCTURE
 
 .bottom {
   bottom: 0;
-	max-height: 100px;
 }
 
 .left {
@@ -240,13 +239,13 @@ CLOCK/GREETING
 	font-weight: 700;
 }
 
-@media screen and (max-width:599px) {  
+@media screen and (max-width:599px) {
   #clock {
     display: none;
   }
 }
 
-@media screen and (max-height:600px) {  
+@media screen and (max-height:600px) {
   #clock {
     display: none;
   }
@@ -276,13 +275,13 @@ CLOCK/GREETING
 	font-weight: 700;
 }
 
-@media screen and (max-width:599px) {  
+@media screen and (max-width:599px) {
   #greeting {
     display: none;
   }
 }
 
-@media screen and (max-height:600px) {  
+@media screen and (max-height:600px) {
   #greeting {
     display: none;
   }
@@ -342,7 +341,6 @@ TO DO LIST & FOCUS
 }
 
 #focusContainer {
-
 	font-size: 40px;
 	font-weight: 600;
 	width: 800px;
@@ -450,6 +448,10 @@ QUOTES
 
 #quote-citation {
 	font-size: 0.85em;
-	margin-top: 15px;
+	margin-top: 10px;
 	display: none;
+}
+
+.onhover {
+	padding-bottom: 5px;
 }
