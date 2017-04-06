@@ -44,7 +44,6 @@ var List = {
     if (task_name.length > 0) {
       var obj = {};
       obj.name = task_name;
-      obj.complete = false;
 
       this.list.push(obj);
       localStorage.setItem(this.loc, JSON.stringify(this.list));
@@ -54,12 +53,9 @@ var List = {
   updateDisplay: function() {
     var todos = "", className = "", icon = "fa-square-o";
     for (var i = 0; i < this.list.length; i++) {
-      if (this.list[i].complete) {
-        className = "complete";
-        icon = "fa-check-square-o";
-      }
+
       todos += "<li class=" + className + ">"
-              + "<span class=\"list-item greeting\">\Hello,\"" + this.list[i].name + "</span>"
+              + "<span class=\"list-item greeting\">" + `Hello, ` + this.list[i].name + "</span>"
               + "<span class=\"delete\"><i class=\"fa fa-minus-square-o\" aria-hidden=\"true\"></i></span>" /*&#9747*/
             + "</li>";
     }
@@ -67,10 +63,8 @@ var List = {
   },
   handleModifications: function(span) {
     var index = $(span).parent().index();
-    if ($(span).hasClass("checkBox")) { // toggle complete
-      this.list[index].complete = !this.list[index].complete;
-    }
-    else if ($(span).hasClass("delete")) { // delete todo from list
+
+    if ($(span).hasClass("delete")) { // delete todo from list
       this.list.splice(index, 1);
     }
     localStorage.setItem(this.loc, JSON.stringify(this.list));
