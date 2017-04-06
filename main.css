@@ -83,7 +83,6 @@ PAGE STRUCTURE
 
 .bottom {
   bottom: 0;
-	max-height: 100px;
 }
 
 .left {
@@ -214,18 +213,96 @@ CLOCK/GREETING
 +++++ */
 
 #date {
-	font-size: 45px;
 	font-weight: 400;
+	white-space: nowrap;
+}
+
+@media screen and (min-width: 200px){
+  #date  {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 724px){
+  #date  {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1240px){
+  #date  {
+    font-size: 45px;
+  }
 }
 
 #clock {
-	font-size: 150px;
 	font-weight: 700;
 }
 
+@media screen and (max-width:599px) {
+  #clock {
+    display: none;
+  }
+}
+
+@media screen and (max-height:600px) {
+  #clock {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px){
+  #clock  {
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 724px){
+  #clock  {
+    font-size: 130px;
+  }
+}
+
+@media screen and (min-width: 1240px){
+  #clock  {
+    font-size: 160px;
+  }
+}
+
+
 #greeting {
-	font-size: 60px;
+	white-space: nowrap;
 	font-weight: 700;
+}
+
+@media screen and (max-width:599px) {
+  #greeting {
+    display: none;
+  }
+}
+
+@media screen and (max-height:600px) {
+  #greeting {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 200px){
+  #greeting  {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 724px){
+  #greeting  {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1240px){
+  #greeting  {
+    font-size: 60px;
+  }
 }
 
 /* +++++
@@ -268,6 +345,26 @@ TO DO LIST & FOCUS
 	font-weight: 600;
 	width: 800px;
 }
+
+
+@media screen and (max-width: 600px){
+  #focusContainer {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1240px){
+  #focusContainer {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 600px){
+  #focusContainer {
+    font-size: 20px;
+  }
+}
+
 
 #focusContainer label {
 	font-weight: 200;
@@ -351,6 +448,10 @@ QUOTES
 
 #quote-citation {
 	font-size: 0.85em;
-	margin-top: 15px;
+	margin-top: 10px;
 	display: none;
+}
+
+.onhover {
+	padding-bottom: 5px;
 }
