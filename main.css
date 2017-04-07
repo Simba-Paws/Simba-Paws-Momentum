@@ -270,37 +270,37 @@ CLOCK/GREETING
 }
 
 
-#greeting {
+.greeting {
 	white-space: nowrap;
 	font-weight: 700;
 }
 
 @media screen and (max-width:599px) {
-  #greeting {
+  .greeting {
     display: none;
   }
 }
 
 @media screen and (max-height:600px) {
-  #greeting {
+  .greeting {
     display: none;
   }
 }
 
 @media screen and (min-width: 200px){
-  #greeting  {
+  .greeting  {
     font-size: 40px;
   }
 }
 
 @media screen and (min-width: 724px){
-  #greeting  {
+  .greeting  {
     font-size: 50px;
   }
 }
 
 @media screen and (min-width: 1240px){
-  #greeting  {
+  .greeting  {
     font-size: 60px;
   }
 }
@@ -454,4 +454,16 @@ QUOTES
 
 .onhover {
 	padding-bottom: 5px;
+}
+
+
+ /* +++++
+GREETER
++++++ */
+
+#GreeterContainer {
+	// position: fixed;
+	// bottom: 300px;
+	// right: 100px;
+
 }
