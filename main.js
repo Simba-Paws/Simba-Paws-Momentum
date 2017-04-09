@@ -171,17 +171,27 @@ var List = {
       	this.updateDisplay();
     	}
   	},
-  	updateDisplay: function() {
-    	var todos = "", className;
-    	for (var i = 0; i < this.list.length; i++) {
-      		className = this.list[i].complete ? "complete" : "";
-      		todos += "<li class=" + className + ">"
-              	+ "<span class=\"checkBox\"><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i></span>" /*&#9634<*/
-              	+ "<span class=\"list-item\">" + this.list[i].name + "</span>"
-              	+ "<span class=\"delete\"><i class=\"fa fa-minus-square-o\" aria-hidden=\"true\"></i></span>" /*&#9747*/
-            	+ "</li>";
-    		}
-    	$(this.target).html(todos);
+		updateDisplay: function() {
+			var todos = [];
+			for (var i = 0; i < this.list.length; i++) {
+				todos[i] = createTodo(i, this.list[i]);
+			}
+
+			$(this.target).html(todos);
+
+			function createTodo(i, list_item) {
+				var className = '', icon = "fa-square-o";
+
+				if (list_item.complete) {
+					className = "complete";
+					icon = "fa-check-square-o";
+				}
+				return "<li class=" + className + ">"
+								+ "<span class=\"checkBox\"><i class=\"fa " + icon + "\" aria-hidden=\"true\"></i></span>" /*&#9634<*/
+								+ "<span class=\"list-item\">" + list_item.name + "</span>"
+								+ "<span class=\"delete\"><i class=\"fa fa-minus-square-o\" aria-hidden=\"true\"></i></span>" /*&#9747*/
+							+ "</li>";
+			}
   	},
   	handleModifications: function(span) {
     	var index = $(span).parent().index();
