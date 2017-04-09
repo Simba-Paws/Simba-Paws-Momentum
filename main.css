@@ -465,5 +465,8 @@ GREETER
 	// position: fixed;
 	// bottom: 300px;
 	// right: 100px;
+}
 
+#Greeter-query {
+	display: none;
 }

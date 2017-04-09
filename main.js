@@ -27,9 +27,10 @@ $(document).ready(function() {
 
 	if (localStorage.getItem('displayName') === null) {
     	getGreeting();
-    } 
-    initGreeting();
-    
+  } else {
+		initGreeting();
+	}
+
 	// For search links
 	$(function(){
     	$(".expand-links").click(function(){
@@ -65,12 +66,13 @@ function getGreeting() {
 
 	console.log("Hiding focus");
 	// Hid the main focus element
-	
-	$("focusContainer").hide();
+	$("#Greeter-query").show();
+	$("#focusContainer").hide();
+	$("#greeting").hide();
 
 	console.log("creating form");
 	// Create a form element and append it to the div
-
+/*
 	var $div = $('<div class="below-center-y center-x container" id="greetContainer></div>');
 	var $form = $('<form id="greetForm"></form>');
 	$form.append('<label>What is your name?</label>');
@@ -78,13 +80,16 @@ function getGreeting() {
 	$form.append('<button type="submit" class="btn-hddn id=clickName">Submit</button>');
 	$div.append($form);
 	$('body').append($div);
-
-	$('greetForm').submit(function() {
+*/
+	$('#Greeter-query').submit(function(e) {
+		e.preventDefault();
 		console.log("in click function");
-    	localStorage.setItem('displayName',focus-input);
-    	$('body').remove($div);
-    	$("focusContainer").show();
-
+    	localStorage.setItem('displayName', $("#Greeter-input").val());
+    	/*$('body').remove($div);*/
+    	$("#focusContainer").show();
+			$("#greeting").show();
+			$("#Greeter-query").hide();
+			initGreeting();
   	});
 
 
@@ -191,7 +196,7 @@ var List = {
   	}
 };
 
-// additional functions specific to main focus 
+// additional functions specific to main focus
 var Focus = Object.create(List);
 Focus.setDivs = function(query_id, display_id) {
 	this.query_id = query_id;
@@ -230,7 +235,7 @@ function quoteDisplay() {
 // Functions for the clock
 
 function initClock() {
- 
+
 	date = new Date();
 	day = days[date.getDay()];
 	day_month = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
@@ -287,7 +292,7 @@ function findUserLocation() {
     });
   }
 
- 
+
   $("#temp-value").click(function() {
 
   console.log("chgUnits was clicked Units = " + units + " UnitSymbol = " + unitSymbol);
@@ -305,6 +310,3 @@ function findUserLocation() {
   getWeather();
 
   });
-
-
-
