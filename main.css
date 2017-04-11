@@ -209,6 +209,15 @@ WIDGETS
 */
 
 /* +++++
+SETTINGS
++++++ */
+
+#settings {
+	left: 15px;
+	bottom: 80px;
+}
+
+/* +++++
 CLOCK/GREETING
 +++++ */
 

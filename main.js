@@ -14,14 +14,17 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 
 var day, day_month, month, year;
 
+// for background image
+var string;
+
 $(document).ready(function() {
 
 	// Display the background
 	if (navigator.onLine) {
-		var string = 'https://source.unsplash.com/category/nature/1920x1080/daily';
+		string = 'https://source.unsplash.com/category/nature/1920x1080/daily';
 		document.body.style.backgroundImage = "url('" + string + "')";
 	} else {
-		var string = './assets/images/momentum-offline.jpg';
+		string = './assets/images/momentum-offline.jpg';
 		document.body.style.backgroundImage = "url('" + string + "')";
 	}
 
@@ -40,6 +43,9 @@ $(document).ready(function() {
 
 	// Start the clock
 	initClock();
+
+	// Display settings
+	initSettings();
 
 	// Find the user's location and display the weather
     findUserLocation();
@@ -95,8 +101,51 @@ function getGreeting() {
 
 }
 
-// Init and functions for todo list
+// Init and functions for settings
+function initSettings() {
+	var default_settings = [
+		{name: "Links", status: "on"},
+		{name: "Search", status: "on"},
+		{name: "Weather", status: "on"},
+		{name: "Quote", status: "on"},
+		{name: "Focus", status: "on"},
+		{name: "To-Do", status: "on"}
+	];
+	// find out whether items are on or off
+	var settings = localStorage.getItem("settings");
+	settings = settings ? JSON.parse(settings) : default_settings;
+	renderSettings();
 
+	// initialize button to open div
+	$("#expand-settings").on("click", function() {
+		$("#settings").toggle();
+	});
+
+	// function to turn items on and off
+	$(".setting-toggle").on("click", function() {
+		var index = $(this).parent().index();
+		if (settings[index].status === "on") {
+			settings[index].status = "off";
+		}
+		else {
+			settings[index].status = "on";
+		}
+		localStorage.setItem("settings", JSON.stringify(settings));
+	});
+/*
+	function renderSettings() {
+		for (var i = 0; i < settings.length; i++) {
+			var item = $(".widget:nth-child(" + (i + 1) + ")");
+			console.log(item);
+			var status = settings[i].status;
+			var item_span = $(item +"span");
+			console.log(item_span); //.html("howdy");
+		}
+	}
+	*/
+}
+
+// Init and functions for todo list
 function initTodoList() {
 
 	// initialize main focus
