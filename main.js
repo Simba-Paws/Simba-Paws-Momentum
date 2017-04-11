@@ -114,7 +114,7 @@ function initSettings() {
 	// find out whether items are on or off
 	var settings = localStorage.getItem("settings");
 	settings = settings ? JSON.parse(settings) : default_settings;
-	renderSettings();
+	//renderSettings();
 
 	// initialize button to open div
 	$("#expand-settings").on("click", function() {
@@ -132,7 +132,7 @@ function initSettings() {
 		}
 		localStorage.setItem("settings", JSON.stringify(settings));
 	});
-/*
+	/*
 	function renderSettings() {
 		for (var i = 0; i < settings.length; i++) {
 			var item = $(".widget:nth-child(" + (i + 1) + ")");
@@ -141,8 +141,7 @@ function initSettings() {
 			var item_span = $(item +"span");
 			console.log(item_span); //.html("howdy");
 		}
-	}
-	*/
+	} */
 }
 
 // Init and functions for todo list
