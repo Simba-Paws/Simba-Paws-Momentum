@@ -479,3 +479,20 @@ GREETER
 #Greeter-query {
 	display: none;
 }
+
+/* +++++
+SETTINGS
++++++ */
+
+#links-container,
+#tempContainer,
+#quote-container,
+#todo-container,
+#focusContainer {
+	display: none;
+}
+
+.setting-toggle {
+	float: right;
+	margin-left: 10px;
+}

@@ -16,7 +16,7 @@
 	<body>
 
 		<!-- LINKS -->
-		<div class="top left container">
+		<div class="top left container" id="links-container">
 			<p class="expand-links btn btn-toggle">Links</p>
 			<form class="search-form" action="http://www.google.com/search" method="get">
 				<span><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -80,12 +80,11 @@
 			<p class="btn btn-toggle" id="expand-settings">Settings</p>
 			<div id="settings" class="panel">
 				<ul>
-					<li class="widget">Links<span class="setting-toggle"></span></li>
-					<li class="widget">Search<span class="setting-toggle"></span></li>
-					<li class="widget">Weather<span class="setting-toggle"></span></li>
-					<li class="widget">Quote<span class="setting-toggle"></span></li>
-					<li class="widget">Focus<span class="setting-toggle"></span></li>
-					<li class="widget">To-Do<span class="setting-toggle"></span></li>
+					<li class="widget">Links<span class="setting-toggle">toggle</span></li>
+					<li class="widget">Weather<span class="setting-toggle">toggle</span></li>
+					<li class="widget">Quote<span class="setting-toggle">toggle</span></li>
+					<li class="widget">Focus<span class="setting-toggle">toggle</span></li>
+					<li class="widget">To-Do<span class="setting-toggle">toggle</span></li>
 				</ul>
 			</div>
 		</div>
@@ -101,7 +100,7 @@
 
 
 		<!-- TO DO LIST  -->
-		<div class="bottom right container">
+		<div class="bottom right container" id="todo-container">
 			<p class="expand-todo btn btn-toggle">Todo</p>
 			<div id="todo" class="todoContainer panel">
 				<ul id="todo-list"></ul>

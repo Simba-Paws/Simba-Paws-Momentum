@@ -17,7 +17,13 @@ var day, day_month, month, year;
 // for background image
 var string;
 
+// for settings
+var settings;
+
 $(document).ready(function() {
+
+	// get settings
+	initSettings();
 
 	// Display the background
 	if (navigator.onLine) {
@@ -35,26 +41,27 @@ $(document).ready(function() {
 	}
 
 	// For search links
-	$(function(){
-    	$(".expand-links").click(function(){
-        	$(".links").toggle();
-      	});
-  	});
+
+
+		$(function(){
+	    	$(".expand-links").click(function(){
+	        	$(".links").toggle();
+	      });
+	  });
+
+
 
 	// Start the clock
 	initClock();
 
-	// Display settings
-	initSettings();
-
 	// Find the user's location and display the weather
-    findUserLocation();
+	findUserLocation();
 
-    // Display a quote
-    quoteDisplay();
+quoteDisplay();
 
-    // Setup the todolist
-    initTodoList();
+initTodoList();
+
+initMainFocus();
 
 });
 
@@ -77,16 +84,7 @@ function getGreeting() {
 	$("#greeting").hide();
 
 	console.log("creating form");
-	// Create a form element and append it to the div
-/*
-	var $div = $('<div class="below-center-y center-x container" id="greetContainer></div>');
-	var $form = $('<form id="greetForm"></form>');
-	$form.append('<label>What is your name?</label>');
-	$form.append('<input class="primary-input" id="focus-input" type="text" val="">');
-	$form.append('<button type="submit" class="btn-hddn id=clickName">Submit</button>');
-	$div.append($form);
-	$('body').append($div);
-*/
+
 	$('#Greeter-query').submit(function(e) {
 		e.preventDefault();
 		console.log("in click function");
@@ -98,23 +96,38 @@ function getGreeting() {
 			initGreeting();
   	});
 
-
 }
 
 // Init and functions for settings
 function initSettings() {
 	var default_settings = [
-		{name: "Links", status: "on"},
-		{name: "Search", status: "on"},
-		{name: "Weather", status: "on"},
-		{name: "Quote", status: "on"},
-		{name: "Focus", status: "on"},
-		{name: "To-Do", status: "on"}
+		{name: "Links", status: "on", id: "#links-container"},
+		{name: "Weather", status: "on", id: "#tempContainer"},
+		{name: "Quote", status: "on", id: "#quote-container"},
+		{name: "Focus", status: "off", id: "#focusContainer"},
+		{name: "To-Do", status: "on", id: "#todo-container"}
 	];
-	// find out whether items are on or off
-	var settings = localStorage.getItem("settings");
-	settings = settings ? JSON.parse(settings) : default_settings;
-	//renderSettings();
+
+	// get settings from local storage
+	settings_string = localStorage.getItem("settings");
+	if (settings_string) {
+		settings = JSON.parse(settings_string);
+	}
+	else {
+		settings = default_settings;
+		localStorage.setItem("settings", JSON.stringify(settings));
+	}
+	$(".setting-toggle").each(function(i) {
+		var index = $(this).parent().index();
+		if (settings[index].status === "on") {
+			$(this).html("<i class='fa fa-check-square-o' aria-hidden='true'></i>");
+			$(settings[index].id).show();
+		}
+		else {
+			$(this).html("<i class='fa fa-square-o' aria-hidden='true'></i>");
+			$(settings[index].id).hide();
+		}
+	});
 
 	// initialize button to open div
 	$("#expand-settings").on("click", function() {
@@ -124,54 +137,55 @@ function initSettings() {
 	// function to turn items on and off
 	$(".setting-toggle").on("click", function() {
 		var index = $(this).parent().index();
+		console.log(settings[index]);
 		if (settings[index].status === "on") {
+			$(this).html("<i class='fa fa-square-o' aria-hidden='true'></i>");
 			settings[index].status = "off";
+			$(settings[index].id).hide();
 		}
 		else {
+			$(this).html("<i class='fa fa-check-square-o' aria-hidden='true'></i>");
 			settings[index].status = "on";
+			$(settings[index].id).show();
 		}
+
+
 		localStorage.setItem("settings", JSON.stringify(settings));
 	});
-	/*
-	function renderSettings() {
-		for (var i = 0; i < settings.length; i++) {
-			var item = $(".widget:nth-child(" + (i + 1) + ")");
-			console.log(item);
-			var status = settings[i].status;
-			var item_span = $(item +"span");
-			console.log(item_span); //.html("howdy");
-		}
-	} */
+}
+
+// Init and functions fo rmain focus
+function initMainFocus() {
+
+	// initialize main focus
+	var mainFocus = Object.create(Focus);
+	mainFocus.setup("focus-list", "#focus-list");
+
+	// set which divs toggle for query/input
+	// call updateView to ensure correct div is displayed
+	mainFocus.setDivs("#focus-query", "#focus-display");
+	mainFocus.updateView();
+
+	// handler to toggle and delete main focus
+	$(mainFocus.target).on("click", "li span", function() {
+  	var span = this;
+  	mainFocus.handleModifications(span);
+  	mainFocus.updateView();
+	});
+
+	// handler to create new main focus
+	$("#focus-query").submit(function(evt) {
+  	evt.preventDefault();
+  	if (mainFocus.list.length === 0) {
+    		mainFocus.addItem($("#focus-input").val());
+  	}
+  $("#focus-input").val("");
+  	mainFocus.updateView($("#focus-query"), $("#focus-display"));
+	});
 }
 
 // Init and functions for todo list
 function initTodoList() {
-
-	// initialize main focus
-  	var mainFocus = Object.create(Focus);
-  	mainFocus.setup("focus-list", "#focus-list");
-
-  	// set which divs toggle for query/input
-  	// call updateView to ensure correct div is displayed
-  	mainFocus.setDivs("#focus-query", "#focus-display");
-  	mainFocus.updateView();
-
-  	// handler to toggle and delete main focus
-  	$(mainFocus.target).on("click", "li span", function() {
-    	var span = this;
-    	mainFocus.handleModifications(span);
-    	mainFocus.updateView();
-  	});
-
-  	// handler to create new main focus
-  	$("#focus-query").submit(function(evt) {
-    	evt.preventDefault();
-    	if (mainFocus.list.length === 0) {
-      		mainFocus.addItem($("#focus-input").val());
-    	}
-    	$("#focus-input").val("");
-    	mainFocus.updateView($("#focus-query"), $("#focus-display"));
-  	});
 
   	// initialize todo list
   	var toDos = Object.create(List);
