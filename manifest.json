@@ -8,7 +8,7 @@
 "manifest_version": 2,
 
 "background": {
-	"scripts": ["main.js"]
+	"scripts": ["assets/javascript/main.js"]
 },
 
 "browser_action": {
