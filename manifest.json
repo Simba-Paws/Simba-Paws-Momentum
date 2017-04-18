@@ -8,11 +8,11 @@
 "manifest_version": 2,
 
 "background": {
-	"scripts": ["main.js"]
+	"scripts": ["assets/javascript/main.js"]
 },
 
 "browser_action": {
-"default_icon": "icon.png"
+"default_icon": "assets/icon.png"
 },
 
 "chrome_url_overrides": {
