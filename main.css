@@ -209,6 +209,15 @@ WIDGETS
 */
 
 /* +++++
+SETTINGS
++++++ */
+
+#settings {
+	left: 15px;
+	bottom: 80px;
+}
+
+/* +++++
 CLOCK/GREETING
 +++++ */
 
@@ -465,5 +474,25 @@ GREETER
 	// position: fixed;
 	// bottom: 300px;
 	// right: 100px;
+}
 
+#Greeter-query {
+	display: none;
+}
+
+/* +++++
+SETTINGS
++++++ */
+
+#links-container,
+#tempContainer,
+#quote-container,
+#todo-container,
+#focusContainer {
+	display: none;
+}
+
+.setting-toggle {
+	float: right;
+	margin-left: 10px;
 }
