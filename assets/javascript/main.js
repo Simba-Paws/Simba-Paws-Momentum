@@ -291,7 +291,7 @@ Focus.updateView = function() {
 
 function quoteDisplay() {
 
-	var qod = $.getJSON("http://quotes.rest/qod.json?category=inspire", function(data) {
+	var qod = $.getJSON("https://quotes.rest/qod.json?category=inspire", function(data) {
     	console.log(data);
     	$("#quotes").html(data.contents.quotes[0].quote);
     	$("#quote-author").html(data.contents.quotes[0].author);
@@ -337,12 +337,12 @@ function updateClock(){
 
 function findUserLocation() {
     // grab user location coords
-    var URL = "http://ip-api.com/json";
+    var URL = "https://freegeoip.net/json/";
     $.get(URL, function(data) {
       // if coords, assign to variables and pass to getWeatherData();
       if (data) {
-        latitude = data.lat;
-        longitude = data.lon;
+        latitude = data.latitude;
+        longitude = data.longitude;
         console.log("Lat = "+latitude+" lon = "+longitude);
         getWeather();
       } else {
