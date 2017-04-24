@@ -353,8 +353,8 @@ function findUserLocation() {
   }
 
   function getWeather() {
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey + "&units=" + units, function(data) {
-      console.log("https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey + "&units=" + units);
+    $.getJSON("https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey + "&units=" + units, function(data) {
+      console.log("https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey + "&units=" + units);
       $("#location-value").html(data.name + ", " + data.sys.country);
       $("#temp-value").html(Math.round(data.main.temp));
       console.log(unitSymbol);
