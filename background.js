@@ -1,4 +1,4 @@
 // makes icon work
-chrome.browserAction.onClicked.addListener(function(activeTab) {
+chrome.browserAction.onClicked.addListener(function() {
   chrome.tabs.create({url: "chrome://newtab"});
 });
