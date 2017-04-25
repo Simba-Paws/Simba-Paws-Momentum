@@ -8,7 +8,7 @@
 "manifest_version": 2,
 
 "background": {
-	"scripts": ["assets/javascript/main.js"]
+	"scripts": ["background.js"]
 },
 
 "browser_action": {
@@ -19,7 +19,7 @@
   "newtab": "index.html"
 },
 
-"permission": [
+"permissions": [
 	"tabs",
 	"storage",
 	"wallpaper"
